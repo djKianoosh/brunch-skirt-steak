@@ -5,11 +5,7 @@
   "dependencies": {
     "console-polyfill": "latest",
     "lodash": "latest",
-    "jquery": "latest"
-  },
-  "overrides": {
-    "jquery": {
-      "main": "dist/jquery.js"
-    }
+    "jquery": "latest",
+    "bootstrap": "latest"
   }
 }

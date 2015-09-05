@@ -2,7 +2,7 @@ exports.config = {
 
 	paths: {
 		public: 'public',
-		watched: ['app', 'vendor']
+		watched: ['app']
 	},
 	conventions: {
 		assets: /(assets)/
@@ -15,7 +15,7 @@ exports.config = {
 		javascripts: {
 			joinTo: {
 				'js/app.js': /^app/,
-				'js/vendor.js': /^(vendor|bower_components)/
+				'js/vendor.js': /^(bower_components)/
 			},
 			order: {
 				before: [
@@ -23,19 +23,19 @@ exports.config = {
 					'bower_components/jquery/dist/jquery.js',
 				],
 				after: [
-					'vendor/js/bootstrap/tooltip.js',
-					'vendor/js/bootstrap/popover.js',
-					'vendor/js/bootstrap/collapse.js',
-					'vendor/js/bootstrap/transition.js'
+					'bower_components/bootstrap/js/tooltip.js',
+					'bower_components/bootstrap/js/popover.js',
+					'bower_components/bootstrap/js/collapse.js',
+					'bower_components/bootstrap/js/transition.js'
 				]
 			}
 		},
 		stylesheets: {
 			joinTo: {
-				'css/app.css': /^(app|vendor|bower_components)/
+				'css/app.css': /^(app|bower_components)/
 			},
 			order: {
-				before: ['vendor/css/bootstrap']
+				//before: ['bower_components/bootstrap/css/bootstrap']
 			}
 		},
 		templates: {

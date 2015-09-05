@@ -8,14 +8,16 @@
     "type": "git",
     "url": ""
   },
+  "private": true,
   "engines": {
     "node": "latest",
     "npm": "latest"
   },
   "scripts": {
+    "postinstall": "bower install --config.interactive=false && cp -r bower_components/bootstrap/fonts app/assets/ && brunch build -P",
     "start": "brunch watch --server"
   },
-  "dependencies": {
+  "devDependencies": {
     "clean-css-brunch": "latest",
     "css-brunch": "latest",
     "handlebars-brunch": "latest",
@@ -23,5 +25,8 @@
     "less-brunch": "latest",
     "uglify-js-brunch": "latest",
     "read-components": "latest"
-  }
+  },
+  "main": "brunch-config.js",
+  "dependencies": {},
+  "license": "MIT"
 }
