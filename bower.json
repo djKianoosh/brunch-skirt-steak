@@ -5,7 +5,7 @@
   "dependencies": {
     "console-polyfill": "latest",
     "lodash": "latest",
-    "jquery": "1.11.0"
+    "jquery": "latest"
   },
   "overrides": {
     "jquery": {
