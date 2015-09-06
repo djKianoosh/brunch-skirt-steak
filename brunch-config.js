@@ -1,5 +1,4 @@
 exports.config = {
-
 	paths: {
 		public: 'public',
 		watched: ['app']
@@ -11,6 +10,11 @@ exports.config = {
 		wrapper: false,
 		definition: false
 	},
+ 	plugins: {
+ 		beforeBrunch : [
+ 			'npm run lodash'
+ 		]
+ 	},
 	files: {
 		javascripts: {
 			joinTo: {
@@ -20,7 +24,8 @@ exports.config = {
 			order: {
 				before: [
 					'bower_components/console-polyfill/index.js',
-					'bower_components/jquery/dist/jquery.js',
+					'bower_components/lodash/lodash.js',
+					'bower_components/jquery/dist/jquery.js'
 				],
 				after: [
 					'bower_components/bootstrap/js/tooltip.js',
@@ -35,11 +40,7 @@ exports.config = {
 				'css/app.css': /^(app|bower_components)/
 			},
 			order: {
-				//before: ['bower_components/bootstrap/css/bootstrap']
 			}
-		},
-		templates: {
-			joinTo: 'js/app.js'
 		}
 	},
   sourceMaps: true
