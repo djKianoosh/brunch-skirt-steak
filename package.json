@@ -14,17 +14,19 @@
     "npm": "latest"
   },
   "scripts": {
+    "lodash": "lodash template=\"app/templates/*.html\" -d -o public/js/templates.js",
     "postinstall": "bower install --config.interactive=false && cp -r bower_components/bootstrap/fonts app/assets/ && brunch build -P",
     "start": "brunch watch --server"
   },
   "devDependencies": {
+    "before-brunch": "latest",
     "clean-css-brunch": "latest",
     "css-brunch": "latest",
-    "handlebars-brunch": "latest",
     "javascript-brunch": "latest",
     "less-brunch": "latest",
-    "uglify-js-brunch": "latest",
-    "read-components": "latest"
+    "lodash-cli": "latest",
+    "read-components": "latest",
+    "uglify-js-brunch": "latest"
   },
   "main": "brunch-config.js",
   "dependencies": {},
